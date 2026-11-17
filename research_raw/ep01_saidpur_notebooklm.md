@@ -64,3 +64,13 @@
 ---
 
 *(তথ্যসূত্র: J.A. Vas, Rangpur District Gazetteer, 1911, pp. 4, 7-9, 25-28, 30, 34, 38, 49, 94, 98, 126, 141, 144, 151-152; W.W. Hunter, A Statistical Account of Bengal, Vol. 7, 1876, pp. 157, 165; E.G. Glazier, Report on the District of Rungpore, 1873, p. 25; Buchanan-Hamilton / Montgomery Martin, Eastern India, Vol. 3, 1838, pp. 40-43; S.C. Majumdar, Rivers of the Bengal Delta, 1942; Sayedpur.txt; Railway.txt; ঘুমহীন শহর, বিনিদ্র বাণিজ্য .txt।)*
+
+---
+
+### উৎস-সমন্বয় ও তারিখ-সংশোধন
+
+বাংলাদেশ রেলওয়ের সরকারি *Saidpur Workshop at a Glance* তথ্যপত্র (জুন ২০২৫) অনুযায়ী, ১৮৭০ সালে সৈয়দপুরে ছোট মিটার-গেজ স্টিম লোকোমোটিভ চলতি মেরামত শেড হিসেবে কাজ শুরু হয়; ১৯০৩ সালে মিটার-গেজ কোচ, ওয়াগন ও স্টিম লোকোমোটিভ মেরামতের জন্য ওয়ার্কশপের পরবর্তী ধাপ প্রতিষ্ঠিত হয়। বাংলাদেশ রেলওয়ের *Rail Master Plan*–এও ১৮৭০ সালের ছোট মেরামত শেডের কথা বলা হয়েছে। তাই ১৮৭০-কে প্রাথমিক repair shed-এর সূচনা এবং ১৮৭৯-কে নাম/রেল প্রশাসনের স্থায়ী নথিভুক্তির মাইলস্টোন হিসেবে আলাদা করে ব্যবহার করতে হবে।
+
+নতুন উৎস-উদ্ধৃতি: [Bangladesh Railway, Saidpur Workshop at a Glance, June 2025, Brief History]; [Bangladesh Railway, Rail Master Plan, 2013, §3.12, p. 31]।
+
+`Railway.txt` এবং `ঘুমহীন শহর, বিনিদ্র বাণিজ্য .txt`–এর লেখক, প্রকাশনা ও তারিখ raw research-এ পূর্ণাঙ্গভাবে শনাক্ত নয়। এগুলোর দাবি প্রকাশের আগে মূল নথি বা পূর্ণাঙ্গ প্রকাশনা-তথ্য দিয়ে যাচাই করতে হবে; স্ক্রিপ্টে এগুলোকে একমাত্র উৎস হিসেবে ব্যবহার করা যাবে না।
