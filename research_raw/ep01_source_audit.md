@@ -29,3 +29,9 @@ The earlier script assigned exact Gazetteer page ranges from an aggregate biblio
 The composite mechanic has no verified name, birthplace or personal history. Show the dramatization label from his first appearance. Generic explanations about markets, meals and workshop work are illustrative scenes, not additional archival findings.
 
 The timing table counts spoken text only. It is a pacing estimate, not a performed or recorded read-through. A Bengali narrator still needs to record a timed take; local review of neighbourhood names and pronunciation has not occurred.
+
+## Creative revision — reconstruction boundaries
+
+The sound-first “রাত তিনটা” opening is a staged night scene, not a verified event time. Label it as reconstruction. The mechanic, porter, seller, food, sleeping mat and reserved cup form an invented three-appearance story. Their exchanges are scripted illustrations, not oral-history transcripts or source quotations. The continuity details do not establish a person's origin or recorded biography. The user authorized these supporting dialogues while retaining Master Moshai as sole narrator.
+
+The tea cooling on the veranda is a presentational motif. The final whistle fading beneath market sounds is an editorial sound transition; it does not assert that factory operations stopped on a documented date. This creative revision adds no evidence for previously excluded wartime manufacture, the power-plant date or the 1879 naming claim. The original page-level verification work listed above remains outstanding.
