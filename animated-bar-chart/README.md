@@ -52,3 +52,15 @@ npx remotion render src/index.ts MakeRoom out/make-room.mp4
 ```
 
 Validation: lint/TypeScript passed; frames from all five scenes, the final hold, and all four transitions rendered successfully. Refine also rendered as a standalone connected composition. The original five-bar chart source was preserved exactly as found at the start of this work.
+
+## Coast to Coast — Los Angeles to New York
+
+Choose **CoastToCoast** in Studio. This silent, 16-second composition is 1920 x 1080 at 30 fps. It holds at Los Angeles, traces a great-circle route while the camera follows the moving marker, holds at New York, then pulls back to show the complete journey. This is an illustrative geographic route, not road navigation.
+
+Edit `src/route/CoastToCoast.tsx`: `ROUTE` controls the endpoints, color, map dimensions, and departure/arrival frames. The `zoom` keyframes control camera distance; `overview` controls the final pullback. Turf calculates the geodesic and distance in kilometers. MapLibre renders native route, marker, and label layers on a frozen 3840 x 2160 vector map; the frame-driven CSS transform moves that plate, keeping map detail stable during the pan.
+
+```powershell
+npx remotion render CoastToCoast out/coast-to-coast.mp4 --gl=angle --concurrency=1
+```
+
+The map tiles and glyphs require internet access during Studio preview and rendering. No API key is required. The worker is vendored from the installed MapLibre version at `public/maplibre-gl-worker.mjs`; refresh it from `node_modules/maplibre-gl/dist/` when upgrading MapLibre. Map data/style source: https://github.com/maplibre/demotiles (reviewed 2026-11-17). Basemap attribution is visible in the composition; the accompanying BSD license is in `public/maplibre-demo-LICENSE.txt` and the worker license is in `public/maplibre-worker-LICENSE.txt`.
