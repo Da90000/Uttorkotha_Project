@@ -8,6 +8,7 @@ import {
   type InteractivitySchema,
   useCurrentFrame,
   useVideoConfig,
+  Track,
 } from "remotion";
 
 type BarProps = {
@@ -116,172 +117,175 @@ const FiveBarChart: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   return (
-    <AbsoluteFill
-      style={{
-        backgroundColor: "#101b23",
-        color: "#f4f7f9",
-        fontFamily: '"Segoe UI", Arial, sans-serif',
-      }}
-    >
-      <Interactive.Div
-        name="Chart heading"
-        premountFor={fps}
+    <>
+      <AbsoluteFill
         style={{
-          position: "absolute",
-          left: 160,
-          top: 104,
-          opacity: interpolate(frame, [0, 0.6 * fps], [0, 1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          }),
-          translate: interpolate(
-            frame,
-            [0, 0.8 * fps],
-            ["0px 20px", "0px 0px"],
-            {
-              easing: Easing.bezier(0.22, 1, 0.36, 1),
+          backgroundColor: "#101b23",
+          color: "#f4f7f9",
+          fontFamily: '"Segoe UI", Arial, sans-serif',
+        }}
+      >
+        <Interactive.Div
+          name="Chart heading"
+          premountFor={fps}
+          style={{
+            position: "absolute",
+            left: 160,
+            top: 104,
+            opacity: interpolate(frame, [0, 0.6 * fps], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
-            },
-          ),
-        }}
-      >
-        <div
-          style={{
-            color: "#72e1d1",
-            fontSize: 24,
-            letterSpacing: 5,
-            fontWeight: 600,
+            }),
+            translate: interpolate(
+              frame,
+              [0, 0.8 * fps],
+              ["0px 20px", "0px 0px"],
+              {
+                easing: Easing.bezier(0.22, 1, 0.36, 1),
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+              },
+            ),
           }}
         >
-          FIVE-BAR COMPARISON
-        </div>
-        <div
-          style={{
-            fontSize: 96,
-            fontWeight: 650,
-            letterSpacing: -4,
-            marginTop: 14,
-          }}
-        >
-          Five bars. One story.
-        </div>
-      </Interactive.Div>
-
-      <Interactive.Div
-        name="Chart grid"
-        premountFor={fps}
-        style={{
-          position: "absolute",
-          inset: 0,
-          opacity: interpolate(frame, [0.3 * fps, 0.85 * fps], [0, 1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          }),
-        }}
-      >
-        {[0, 25, 50, 75, 100].map((tick) => (
           <div
-            key={tick}
             style={{
-              position: "absolute",
-              left: 290,
-              top: 850 - tick * 5,
-              width: 1380,
+              color: "#72e1d1",
+              fontSize: 24,
+              letterSpacing: 5,
+              fontWeight: 600,
             }}
           >
+            FIVE-BAR COMPARISON
+          </div>
+          <div
+            style={{
+              fontSize: 96,
+              fontWeight: 650,
+              letterSpacing: -4,
+              marginTop: 14,
+            }}
+          >
+            Five bars. One story.
+          </div>
+        </Interactive.Div>
+      
+        <Interactive.Div
+          name="Chart grid"
+          premountFor={fps}
+          style={{
+            position: "absolute",
+            inset: 0,
+            opacity: interpolate(frame, [0.3 * fps, 0.85 * fps], [0, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            }),
+          }}
+        >
+          {[0, 25, 50, 75, 100].map((tick) => (
             <div
+              key={tick}
               style={{
                 position: "absolute",
-                left: -102,
-                top: -21,
-                width: 68,
-                textAlign: "right",
-                fontSize: 28,
-                color: "#889aa8",
-                fontVariantNumeric: "tabular-nums",
+                left: 290,
+                top: 850 - tick * 5,
+                width: 1380,
               }}
             >
-              {tick}
+              <div
+                style={{
+                  position: "absolute",
+                  left: -102,
+                  top: -21,
+                  width: 68,
+                  textAlign: "right",
+                  fontSize: 28,
+                  color: "#889aa8",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
+                {tick}
+              </div>
+              <div
+                style={{
+                  height: tick === 0 ? 2 : 1,
+                  background: tick === 0 ? "#617280" : "#2c3a45",
+                }}
+              />
             </div>
-            <div
-              style={{
-                height: tick === 0 ? 2 : 1,
-                background: tick === 0 ? "#617280" : "#2c3a45",
-              }}
-            />
-          </div>
-        ))}
-      </Interactive.Div>
-
-      <ChartBar
-        name="Bar A"
-        from={0.8 * fps}
-        premountFor={fps}
-        label="Category A"
-        value={35}
-        color="#72e1d1"
-        style={{ left: 360 }}
-      />
-      <ChartBar
-        name="Bar B"
-        from={1 * fps}
-        premountFor={fps}
-        label="Category B"
-        value={52}
-        color="#8cb9ef"
-        style={{ left: 620 }}
-      />
-      <ChartBar
-        name="Bar C"
-        from={1.2 * fps}
-        premountFor={fps}
-        label="Category C"
-        value={68}
-        color="#b8a8ed"
-        style={{ left: 880 }}
-      />
-      <ChartBar
-        name="Bar D"
-        from={1.4 * fps}
-        premountFor={fps}
-        label="Category D"
-        value={81}
-        color="#ffad81"
-        style={{ left: 1140 }}
-      />
-      <ChartBar
-        name="Bar E"
-        from={1.6 * fps}
-        premountFor={fps}
-        label="Category E"
-        value={95}
-        color="#f1d97c"
-        style={{ left: 1400 }}
-      />
-
-      <Interactive.Div
-        name="Sample data note"
-        premountFor={fps}
-        style={{
-          position: "absolute",
-          left: 160,
-          right: 160,
-          bottom: 100,
-          display: "flex",
-          justifyContent: "space-between",
-          fontSize: 24,
-          color: "#889aa8",
-          opacity: interpolate(frame, [0.5 * fps, 1 * fps], [0, 1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          }),
-        }}
-      >
-        <span>Illustrative sample data</span>
-        <span>VALUE / 0–100</span>
-      </Interactive.Div>
-    </AbsoluteFill>
+          ))}
+        </Interactive.Div>
+      
+        <ChartBar
+          name="Bar A"
+          from={0.8 * fps}
+          premountFor={fps}
+          label="Category A"
+          value={35}
+          color="#72e1d1"
+          style={{ left: 360 }}
+        />
+        <ChartBar
+          name="Bar B"
+          from={1 * fps}
+          premountFor={fps}
+          label="Category B"
+          value={52}
+          color="#8cb9ef"
+          style={{ left: 620 }}
+        />
+        <ChartBar
+          name="Bar C"
+          from={1.2 * fps}
+          premountFor={fps}
+          label="Category C"
+          value={68}
+          color="#b8a8ed"
+          style={{ left: 880 }}
+        />
+        <ChartBar
+          name="Bar D"
+          from={1.4 * fps}
+          premountFor={fps}
+          label="Category D"
+          value={81}
+          color="#ffad81"
+          style={{ left: 1140 }}
+        />
+        <ChartBar
+          name="Bar E"
+          from={1.6 * fps}
+          premountFor={fps}
+          label={"New Category"}
+          value={85}
+          color="#f1d97c"
+          style={{ left: 1400 }}
+        />
+      
+        <Interactive.Div
+          name="Sample data note"
+          premountFor={fps}
+          style={{
+            position: "absolute",
+            left: 160,
+            right: 160,
+            bottom: 100,
+            display: "flex",
+            justifyContent: "space-between",
+            fontSize: 24,
+            color: "#889aa8",
+            opacity: interpolate(frame, [0.5 * fps, 1 * fps], [0, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            }),
+          }}
+        >
+          <span>Illustrative sample data</span>
+          <span>VALUE / 0–100</span>
+        </Interactive.Div>
+      </AbsoluteFill>
+      <Track />
+    </>
   );
 };
 
