@@ -64,3 +64,7 @@ npx remotion render CoastToCoast out/coast-to-coast.mp4 --gl=angle --concurrency
 ```
 
 The map tiles and glyphs require internet access during Studio preview and rendering. No API key is required. The worker is vendored from the installed MapLibre version at `public/maplibre-gl-worker.mjs`; refresh it from `node_modules/maplibre-gl/dist/` when upgrading MapLibre. Map data/style source: https://github.com/maplibre/demotiles (reviewed 2026-11-17). Basemap attribution is visible in the composition; the accompanying BSD license is in `public/maplibre-demo-LICENSE.txt` and the worker license is in `public/maplibre-worker-LICENSE.txt`.
+
+### Bengali narration, music and sound effects
+
+Choose **CoastToCoastBengali** for the version with Bengali narration, an original instrumental score, departure and camera whooshes, and an arrival chime. Export to `out/coast-to-coast-bengali.mp4`. Each audio clip is separately editable in `src/route/RouteSoundtrack.tsx`; script, measured timings, regeneration and source details are in `src/route/AUDIO.md`. The original silent composition is also available.

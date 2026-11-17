@@ -4,6 +4,7 @@ import * as maplibregl from "maplibre-gl";
 import type {GeoJSONSource, Map as LibreMap, StyleSpecification} from "maplibre-gl";
 import * as turf from "@turf/turf";
 import "maplibre-gl/dist/maplibre-gl.css";
+import {RouteSoundtrack} from "./RouteSoundtrack";
 
 // Editable route, palette and camera controls. Coordinates are longitude, latitude.
 export const ROUTE = {
@@ -120,4 +121,9 @@ export const CoastToCoast = () => {
   </AbsoluteFill>;
 };
 
-export const RouteCompositions = () => <Composition id="CoastToCoast" component={CoastToCoast} width={1920} height={1080} fps={30} durationInFrames={480} />;
+const CoastToCoastBengali = () => <><CoastToCoast /><RouteSoundtrack /></>;
+
+export const RouteCompositions = () => <>
+  <Composition id="CoastToCoast" component={CoastToCoast} width={1920} height={1080} fps={30} durationInFrames={480} />
+  <Composition id="CoastToCoastBengali" component={CoastToCoastBengali} width={1920} height={1080} fps={30} durationInFrames={480} />
+</>;

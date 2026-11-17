@@ -1,0 +1,57 @@
+{
+  "provider": "Microsoft Edge online speech via edge-tts",
+  "voice": "bn-BD-PradeepNeural",
+  "rate": "-4%",
+  "fps": 30,
+  "segments": [
+    {
+      "file": "01-departure.mp3",
+      "from": 15,
+      "text": "লস অ্যাঞ্জেলেস থেকে যাত্রা শুরু।",
+      "durationSeconds": 2.928,
+      "boundaries": []
+    },
+    {
+      "file": "02-journey.mp3",
+      "from": 120,
+      "text": "পশ্চিম থেকে পূর্বে এগিয়ে চলি।",
+      "durationSeconds": 2.88,
+      "boundaries": [
+        {
+          "type": "SentenceBoundary",
+          "offset": 1000000,
+          "duration": 28125000,
+          "text": "পশ্চিম থেকে পূর্বে এগিয়ে চলি"
+        }
+      ]
+    },
+    {
+      "file": "03-distance.mp3",
+      "from": 231,
+      "text": "প্রায় চার হাজার কিলোমিটার পেরিয়ে।",
+      "durationSeconds": 2.928,
+      "boundaries": [
+        {
+          "type": "SentenceBoundary",
+          "offset": 1000000,
+          "duration": 28645833,
+          "text": "প্রায় চার হাজার কিলোমিটার পেরিয়ে"
+        }
+      ]
+    },
+    {
+      "file": "04-arrival.mp3",
+      "from": 351,
+      "text": "পৌঁছে যাই নিউ ইয়র্কে।",
+      "durationSeconds": 2.472,
+      "boundaries": [
+        {
+          "type": "SentenceBoundary",
+          "offset": 1000000,
+          "duration": 24218750,
+          "text": "পৌঁছে যাই নিউ ইয়র্কে"
+        }
+      ]
+    }
+  ]
+}

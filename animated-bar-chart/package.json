@@ -10,6 +10,7 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.544",
+    "@remotion/media": "4.0.544",
     "@turf/turf": "^7.4.0",
     "maplibre-gl": "^6.18.0",
     "react": "19.3.1",
