@@ -1,6 +1,6 @@
 # Reference-led motion graphics — creative direction
 
-Status: reference analysis complete; narration timing and editor selection pending.
+Status: implemented as `MakeRoom`, a 20-second silent Remotion composition. The user selected Remotion and requested production without voiceover. See `ANIMATION-PLAN.md` for the complete timeline.
 
 ## Supplied reference
 
@@ -56,21 +56,14 @@ These are possible treatments, not claims about an unprovided narration.
 
 ## Recording and scene plan
 
-No voiceover was attached or found in the current project's media folders during the initial check. Duration, transcript, sentence timings, uncertain words, and full-recording scene coverage are therefore unverified. Do not invent them.
-
-After the recording is identified, create the transcript with sentence and important-phrase start/end times. Mark uncertain speech explicitly and retain the full original audio. Build the complete scene plan with these fields:
-
-`Scene | Audio in/out | Verbatim phrase | Visual concept | On-screen text | Main movement | Transition | Optional sound cue | Editable controls`
-
-Each row must refer to real recording times. Check for gaps, overlaps, and preservation of the entire voiceover, including its start and end.
+The user clarified: "make without voiceover". This version is silent; no transcript, narration timestamps, or invented speech is included. A complete 600-frame animation plan is in `ANIMATION-PLAN.md`.
 
 ## Editor check and production gate
 
-- The user tagged Remotion and separately requested native Resolve/Fusion construction. Editor selection needs clarification before implementation.
+- The user selected Remotion with editable graphics in the existing Studio project, superseding the earlier Resolve/Fusion implementation request.
 - No Resolve process or window was found. Standard Resolve executable and scripting README paths were absent; no Resolve entry was returned by the installed-app registry check. No usable Resolve connector was returned by plugin search. This does not exclude a custom installation elsewhere.
 - Resolve version, current project, timeline settings, media pool, and native scripting controls remain unverified.
-- If Resolve is supplied: inspect its actual version and controls, inspect the existing project/timeline/media pool, save a backup, then build named Fusion scenes using editable text, shapes, masks, transforms, and curves supported by that installation.
-- If Remotion is selected: use the existing local Studio toolchain and build a separate composition with editable graphics; retain the five-bar chart and the user's current source edits.
-- An existing uncommitted change was observed in `animated-bar-chart/src/Composition.tsx`. Do not overwrite or include it in this planning change.
+- Built a separate `MakeRoom` composition and five connected scene compositions using the existing local Studio toolchain.
+- The user's uncommitted five-bar chart edits in `animated-bar-chart/src/Composition.tsx` were preserved and excluded from the new commits.
 
-No timeline or video source was modified during this initial planning pass. No finished video or timecoded animation plan has been produced yet.
+Source/config backup: `animated-bar-chart/out/backups/pre-workspace-motion-20261117/`. Studio preview: `http://localhost:3001/MakeRoom`. The older port-3000 server stopped responding during checks, so a separate instance was started on 3001.
